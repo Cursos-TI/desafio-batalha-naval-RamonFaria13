@@ -23,8 +23,15 @@ for tentativa in range(6):
     for linha in tabuleiro:
         print(' '.join(['~' if cel != 'X' and cel != '*' else cel for cel in linha]))
 
+try:
     linha = int(input("Escolha a linha (0 a 4): "))
     coluna = int(input("Escolha a coluna (0 a 4): "))
+    if not (0 <= linha <= 4 and 0 <= coluna <= 4):
+        print("🚫 Coordenadas fora do tabuleiro! Tente novamente.")
+        continue  # volta pro início do loop
+except ValueError:
+    print("🚫 Entrada inválida! Use apenas números de 0 a 4.")
+    continue
 
     if tabuleiro[linha][coluna] == 'N':
         print("💥 Acertou!")
@@ -37,3 +44,7 @@ for tentativa in range(6):
         tabuleiro[linha][coluna] = '*'
 
 print(f"\nFim de jogo! Total de acertos: {acertos}")
+
+print("\nTabuleiro final:")
+for linha in tabuleiro:
+    print(' '.join(linha))
