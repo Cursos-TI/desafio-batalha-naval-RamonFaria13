@@ -19,6 +19,24 @@ Neste nível inicial, você implementará a lógica básica de posicionamento de
 
 ### 📤 Saída de Dados:
 - Após o posicionamento, o sistema deve exibir as coordenadas dos navios de forma clara e organizada.
+- ---
+
+## Sobre minha implementação (Nível Novato)
+
+- Tabuleiro 5x5.
+- Posicionei manualmente 6 posições de navios (3 horizontais no topo, 3 verticais na coluna 4).
+- O jogo permite 6 tentativas para acertar os navios.
+- Não implementei validação avançada de entrada (entrada deve ser número entre 0 e 4).
+- O jogo roda no terminal, solicita linha e coluna, e informa acertos, erros e posições já atacadas.
+- O jogo finaliza após 6 tentativas e mostra o total de acertos.
+
+## Como executar
+
+Para rodar o jogo, execute o arquivo `batalha_naval.py` usando Python 3:
+
+```bash
+python batalha_naval.py
+
 
 ---
 
